@@ -33,6 +33,7 @@
         "redis": "^3.0.2"
     },
     "devDependencies": {
+        "dotenv": "^16.4.5",
         "eslint": "^7.16.0",
         "eslint-config-google": "^0.14.0",
         "eslint-plugin-react": "^7.22.0"

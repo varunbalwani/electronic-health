@@ -135,15 +135,15 @@ export class PatientEditComponent implements OnInit, OnDestroy {
         formData.append(key, this.form.value[key]);
       }
       console.log(formData);
-      // this.allSub.add(
-      //   this.patientService.updatePatientMedicalDetails(this.patientId, formData).subscribe(x => {
-      //     const response = x;
-      //     if (response.error) {
-      //       this.error = response.error;
-      //     }
-      //     this.router.navigate(['/', 'patient', this.patientId]);
-      //   })
-      // );
+      this.allSub.add(
+        this.patientService.updatePatientMedicalDetails(this.patientId, formData).subscribe(x => {
+          const response = x;
+          if (response.error) {
+            this.error = response.error;
+          }
+          this.router.navigate(['/', 'patient', this.patientId]);
+        })
+      );
     }
   }
 
